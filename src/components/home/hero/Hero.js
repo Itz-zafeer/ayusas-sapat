@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="minfullVh minfullSvh flex items-end lg:py-[25.9694477086vh] pt-[150px] relative">
+    <section className="minfullVh minfullSvh flex items-end lg:py-[25.9694477086vh] pt-[105px] relative">
       <BackGrounds />
       <div className="flex flex-col w-full">
         <Content />
