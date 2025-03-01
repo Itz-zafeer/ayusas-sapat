@@ -371,6 +371,9 @@ body {
   .mtext20 {
     @apply sm:text-[22px] sm:leading-[28px] text-[20px] leading-[26px];
   }
+  .mtext30 {
+    @apply sm:text-[32px] sm:leading-[38px] text-[30px] leading-[46px];
+  }
   .mtext35 {
     @apply sm:text-[37px] sm:leading-[48px] text-[35px] leading-[46px];
   }
@@ -386,4 +389,13 @@ body {
   height: 100vh;
   height: 100svh;
   overflow: hidden;
+}
+.hideScroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hideScroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

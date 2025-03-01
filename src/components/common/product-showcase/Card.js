@@ -4,8 +4,8 @@ import LinkBtn from "../buttons/LinkButton";
 
 const Card = ({ product }) => {
   return (
-    <div>
-      <div className="w-full lg:py-[var(--vw50)] py-[22px] inter">
+    <div className="flex flex-col">
+      <div className="h-full bg-white text-darkblack w-full lg:py-[var(--vw50)] py-9 inter lg:rounded-[var(--vw30)] overflow-hidden rounded-[20px] border border-[#9BB59E]">
         <div className="relative lg:w-[var(--vw178)] lg:h-[15.0793650794vw] w-[141px] h-[181px] mx-auto">
           <Image fill alt="product_image" src={product.image} />
         </div>
@@ -18,11 +18,12 @@ const Card = ({ product }) => {
           </p>
         </div>
       </div>
-      <div className="text-center">
+      <div className="text-center lg:mt-[calc(-1*var(--vw31))] -mt-6 lg:w-[18.7169312169vw] w-[80.322%] mx-auto">
         <LinkBtn
           text={"ADD TO CART"}
           link={"/"}
-          gapping={"px-0 lg:py-[var(--vw17)]"}
+          gapping={"px-0 lg:py-[var(--vw19)] py-[13.5px]"}
+          fontSizes={"lg:text20 mtext14"}
         />
       </div>
     </div>
