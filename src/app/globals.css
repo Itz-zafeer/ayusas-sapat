@@ -1,24 +1,389 @@
-@import "tailwindcss";
-
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #fff;
+  --darkblack: #000;
+  --black: #1c1e25;
+  --yellow: #f1b315;
+  --green: #056d36;
+  --c0f3e25: #0f3e25;
+  --c187c3f: #187c3f;
+  --f5eee1: #f5eee1;
+  --fbf9f7: #fbf9f7;
+  --c818080: #818080;
+  --e0e0e0: #e0e0e0;
+  --c56575A: #56575a;
+
+  /* VIEW PORT WIDTH VARIABLES */
+
+  --vw10: 0.66137566137vw;
+  --vw12: 0.79365079365vw;
+  --vw13: 0.85978835979vw;
+  --vw14: 0.92592592593vw;
+  --vw15: 0.99206349206vw;
+  --vw16: 1.0582010582vw;
+  --vw17: 1.12433862434vw;
+  --vw18: 1.19047619048vw;
+  --vw19: 1.25661375661vw;
+  --vw20: 1.32275132275vw;
+  --vw21: 1.38888888889vw;
+  --vw22: 1.45502645503vw;
+  --vw23: 1.52116402116vw;
+  --vw24: 1.5873015873vw;
+  --vw25: 1.65343915344vw;
+  --vw26: 1.71957671958vw;
+  --vw27: 1.78571428571vw;
+  --vw28: 1.85185185185vw;
+  --vw29: 1.91798941799vw;
+  --vw30: 1.98412698413vw;
+  --vw31: 2.05026455026vw;
+  --vw32: 2.1164021164vw;
+  --vw33: 2.18253968254vw;
+  --vw34: 2.24867724868vw;
+  --vw35: 2.31481481481vw;
+  --vw36: 2.38095238095vw;
+  --vw37: 2.44708994709vw;
+  --vw38: 2.51322751323vw;
+  --vw39: 2.57936507937vw;
+  --vw40: 2.6455026455vw;
+  --vw41: 2.71164021164vw;
+  --vw42: 2.77777777778vw;
+  --vw43: 2.84391534392vw;
+  --vw44: 2.91005291005vw;
+  --vw45: 2.97619047619vw;
+  --vw46: 3.04232804233vw;
+  --vw47: 3.10846560847vw;
+  --vw48: 3.1746031746vw;
+  --vw49: 3.24074074074vw;
+  --vw50: 3.30687830688vw;
+  --vw51: 3.37301587302vw;
+  --vw52: 3.43915343915vw;
+  --vw53: 3.50529100529vw;
+  --vw54: 3.57142857143vw;
+  --vw55: 3.63756613757vw;
+  --vw56: 3.7037037037vw;
+  --vw57: 3.76984126984vw;
+  --vw58: 3.83597883598vw;
+  --vw59: 3.90211640212vw;
+  --vw60: 3.96825396825vw;
+  --vw61: 4.03439153439vw;
+  --vw62: 4.10052910053vw;
+  --vw63: 4.16666666667vw;
+  --vw64: 4.2328042328vw;
+  --vw65: 4.29894179894vw;
+  --vw66: 4.36507936508vw;
+  --vw67: 4.43121693122vw;
+  --vw68: 4.49735449735vw;
+  --vw69: 4.56349206349vw;
+  --vw70: 4.62962962963vw;
+  --vw71: 4.69576719577vw;
+  --vw72: 4.7619047619vw;
+  --vw73: 4.82804232804vw;
+  --vw74: 4.89417989418vw;
+  --vw75: 4.96031746032vw;
+  --vw76: 5.02645502646vw;
+  --vw77: 5.09259259259vw;
+  --vw78: 5.15873015873vw;
+  --vw79: 5.22486772487vw;
+  --vw80: 5.29100529101vw;
+  --vw81: 5.35714285714vw;
+  --vw82: 5.42328042328vw;
+  --vw83: 5.48941798942vw;
+  --vw84: 5.55555555556vw;
+  --vw85: 5.62169312169vw;
+  --vw86: 5.68783068783vw;
+  --vw87: 5.75396825397vw;
+  --vw88: 5.82010582011vw;
+  --vw89: 5.88624338624vw;
+  --vw90: 5.95238095238vw;
+  --vw91: 6.01851851852vw;
+  --vw92: 6.08465608466vw;
+  --vw93: 6.15079365079vw;
+  --vw94: 6.21693121693vw;
+  --vw95: 6.28306878307vw;
+  --vw96: 6.34920634921vw;
+  --vw97: 6.41534391534vw;
+  --vw98: 6.48148148148vw;
+  --vw99: 6.54761904762vw;
+  --vw100: 6.61375661376vw;
+  --vw101: 6.67989417989vw;
+  --vw102: 6.74603174603vw;
+  --vw103: 6.81216931217vw;
+  --vw104: 6.87830687831vw;
+  --vw105: 6.94444444444vw;
+  --vw106: 7.01058201058vw;
+  --vw107: 7.07671957672vw;
+  --vw108: 7.14285714286vw;
+  --vw109: 7.20899470899vw;
+  --vw110: 7.27513227513vw;
+  --vw111: 7.34126984127vw;
+  --vw112: 7.40740740741vw;
+  --vw113: 7.47354497354vw;
+  --vw114: 7.53968253968vw;
+  --vw115: 7.60582010582vw;
+  --vw116: 7.67195767196vw;
+  --vw117: 7.7380952381vw;
+  --vw118: 7.80423280423vw;
+  --vw119: 7.87037037037vw;
+  --vw120: 7.93650793651vw;
+  --vw121: 8.00264550265vw;
+  --vw122: 8.06878306878vw;
+  --vw123: 8.13492063492vw;
+  --vw124: 8.20105820106vw;
+  --vw125: 8.2671957672vw;
+  --vw126: 8.33333333333vw;
+  --vw127: 8.39947089947vw;
+  --vw128: 8.46560846561vw;
+  --vw129: 8.53174603175vw;
+  --vw130: 8.59788359788vw;
+  --vw131: 8.66402116402vw;
+  --vw132: 8.73015873016vw;
+  --vw133: 8.7962962963vw;
+  --vw134: 8.86243386243vw;
+  --vw135: 8.92857142857vw;
+  --vw136: 8.99470899471vw;
+  --vw137: 9.06084656085vw;
+  --vw138: 9.12698412698vw;
+  --vw139: 9.19312169312vw;
+  --vw140: 9.25925925926vw;
+  --vw141: 9.3253968254vw;
+  --vw142: 9.39153439153vw;
+  --vw143: 9.45767195767vw;
+  --vw144: 9.52380952381vw;
+  --vw145: 9.58994708995vw;
+  --vw146: 9.65608465608vw;
+  --vw147: 9.72222222222vw;
+  --vw148: 9.78835978836vw;
+  --vw149: 9.8544973545vw;
+  --vw150: 9.92063492063vw;
+  --vw151: 9.98677248677vw;
+  --vw152: 10.05291005291vw;
+  --vw153: 10.11904761905vw;
+  --vw154: 10.18518518519vw;
+  --vw155: 10.25132275132vw;
+  --vw156: 10.31746031746vw;
+  --vw157: 10.3835978836vw;
+  --vw158: 10.44973544974vw;
+  --vw159: 10.51587301587vw;
+  --vw160: 10.58201058201vw;
+  --vw161: 10.64814814815vw;
+  --vw162: 10.71428571429vw;
+  --vw163: 10.78042328042vw;
+  --vw164: 10.84656084656vw;
+  --vw165: 10.9126984127vw;
+  --vw166: 10.97883597884vw;
+  --vw167: 11.04497354497vw;
+  --vw168: 11.11111111111vw;
+  --vw169: 11.17724867725vw;
+  --vw170: 11.24338624339vw;
+  --vw171: 11.30952380952vw;
+  --vw172: 11.37566137566vw;
+  --vw173: 11.4417989418vw;
+  --vw174: 11.50793650794vw;
+  --vw175: 11.57407407407vw;
+  --vw176: 11.64021164021vw;
+  --vw177: 11.70634920635vw;
+  --vw178: 11.77248677249vw;
+  --vw179: 11.83862433862vw;
+  --vw180: 11.90476190476vw;
+  --vw181: 11.9708994709vw;
+  --vw182: 12.03703703704vw;
+  --vw183: 12.10317460317vw;
+  --vw184: 12.16931216931vw;
+  --vw185: 12.23544973545vw;
+  --vw186: 12.30158730159vw;
+  --vw187: 12.36772486772vw;
+  --vw188: 12.43386243386vw;
+  --vw189: 12.5vw;
+  --vw190: 12.56613756614vw;
+  --vw191: 12.63227513228vw;
+  --vw192: 12.69841269841vw;
+  --vw193: 12.76455026455vw;
+  --vw194: 12.83068783069vw;
+  --vw195: 12.89682539683vw;
+  --vw196: 12.96296296296vw;
+  --vw197: 13.0291005291vw;
+  --vw198: 13.09523809524vw;
+  --vw199: 13.16137566138vw;
+  --vw200: 13.22751322751vw;
+
+  /* VIEW PORT WIDTH VARIABLES */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* DM Sans */
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+/* DM Sans */
+
+@font-face {
+  font-family: "Fenix";
+  src: url("/fonts/Fenix/Fenix-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter_28pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter_28pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+.inter {
+  font-family: "Inter";
+}
+.fenix {
+  font-family: "Fenix";
+}
+.dm_sans {
+  font-family: "DM Sans";
+}
+body {
+  font-family: "DM Sans";
+  background-color: var(--white);
+  color: var(--c0f3e25);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .minfullVh.minfullSvh {
+    @apply min-h-[100vh] min-h-[100svh];
+  }
+  .fullVh.fullSvh {
+    @apply h-[100vh] h-[100svh];
+  }
+  .myContainer {
+    @apply lg:w-[82.671957672vw] w-[89.744%] mx-auto;
+  }
+  .text14 {
+    @apply lg:text-vw14 lg:leading-[var(--vw18)];
+  }
+  .text16 {
+    @apply lg:text-vw16 lg:leading-[1.15740740741vw];
+  }
+  .text20 {
+    @apply lg:text-vw20 lg:leading-[var(--vw26)];
+  }
+  .text24 {
+    @apply lg:text-vw24 lg:leading-[var(--vw31)];
+  }
+  .text28 {
+    @apply lg:text-vw28 lg:leading-[var(--vw36)];
+  }
+  .text30 {
+    @apply lg:text-vw30 lg:leading-[var(--vw39)];
+  }
+  .text50 {
+    @apply lg:text-vw50 lg:leading-[var(--vw65)] mtext24 font-bold;
+  }
+  .text60 {
+    @apply lg:text-vw60 lg:leading-[var(--vw78)] mtext24 font-bold;
+  }
+  .text18 {
+    @apply lg:text-vw18 lg:leading-[var(--vw23)] mtext18;
+  }
+  .mtext10 {
+    @apply sm:text-[12px] sm:leading-[15px] text-[10px] leading-[13px];
+  }
+  .mtext12 {
+    @apply sm:text-[14px] sm:leading-[18px] text-[12px] leading-[16px];
+  }
+  .mtext14 {
+    @apply sm:text-[16px] sm:leading-[20px] text-[14px] leading-[18px];
+  }
+  .mtext16 {
+    @apply sm:text-[18px] sm:leading-[22px] text-[16px] leading-[21px];
+  }
+  .mtext18 {
+    @apply sm:text-[20px] sm:leading-[24px] text-[18px] leading-[22px];
+  }
+  .mtext24 {
+    @apply sm:text-[26px] sm:leading-[33px] text-[24px] leading-[31px];
+  }
+  .mtext20 {
+    @apply sm:text-[22px] sm:leading-[28px] text-[20px] leading-[26px];
+  }
+  .mtext35 {
+    @apply sm:text-[37px] sm:leading-[48px] text-[35px] leading-[46px];
+  }
+  .atlwh_Full {
+    @apply absolute top-0 left-0 w-full h-full;
   }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+.bodyActive {
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
 }
