@@ -7,7 +7,9 @@
   --darkblack: #000;
   --black: #1c1e25;
   --yellow: #f1b315;
+  --lightgreen: #187c3f;
   --green: #056d36;
+  --darkgreen: #0f3e25;
   --c0f3e25: #0f3e25;
   --c187c3f: #187c3f;
   --f5eee1: #f5eee1;
@@ -18,7 +20,12 @@
 
   /* VIEW PORT WIDTH VARIABLES */
 
+  --vw05: 0.03306878306vw;
+  --vw1: 0.06613756613vw;
+  --vw2: 0.13227513227vw;
+  --vw8: 0.5291005291vw;
   --vw10: 0.66137566137vw;
+  --vw11: 0.72751322751vw;
   --vw12: 0.79365079365vw;
   --vw13: 0.85978835979vw;
   --vw14: 0.92592592593vw;
@@ -219,6 +226,7 @@
   src: url("/fonts/DM-Sans/DMSans-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -226,6 +234,7 @@
   src: url("/fonts/DM-Sans/DMSans-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -233,6 +242,7 @@
   src: url("/fonts/DM-Sans/DMSans-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -240,6 +250,7 @@
   src: url("/fonts/DM-Sans/DMSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -247,6 +258,7 @@
   src: url("/fonts/DM-Sans/DMSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -254,6 +266,7 @@
   src: url("/fonts/DM-Sans/DMSans-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -261,6 +274,7 @@
   src: url("/fonts/DM-Sans/DMSans-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -268,6 +282,7 @@
   src: url("/fonts/DM-Sans/DMSans-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -275,26 +290,30 @@
   src: url("/fonts/DM-Sans/DMSans-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
+  font-display: block;
 }
 /* DM Sans */
 
 @font-face {
   font-family: "Fenix";
-  src: url("/fonts/Fenix/Fenix-Regular.ttf") format("truetype");
+  src: url("/fonts/Fenix/Fenix-Regular.ttf");
   font-weight: 400;
   font-style: normal;
+  font-display: block;
 }
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter/Inter_28pt-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: block;
 }
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter/Inter_28pt-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: block;
 }
 .inter {
   font-family: "Inter";
@@ -326,6 +345,12 @@ body {
   .text14 {
     @apply lg:text-vw14 lg:leading-[var(--vw18)];
   }
+  .text13 {
+    @apply lg:text-vw13 lg:leading-[var(--vw17)];
+  }
+  .text12 {
+    @apply lg:text-vw12 lg:leading-[var(--vw16)];
+  }
   .text16 {
     @apply lg:text-vw16 lg:leading-[1.15740740741vw];
   }
@@ -340,6 +365,9 @@ body {
   }
   .text30 {
     @apply lg:text-vw30 lg:leading-[var(--vw39)];
+  }
+  .text40 {
+    @apply lg:text-vw40 lg:leading-[var(--vw52)] mtext24 font-bold;
   }
   .text50 {
     @apply lg:text-vw50 lg:leading-[var(--vw65)] mtext24 font-bold;
@@ -365,6 +393,9 @@ body {
   .mtext18 {
     @apply sm:text-[20px] sm:leading-[24px] text-[18px] leading-[22px];
   }
+  .mtext22 {
+    @apply sm:text-[24px] sm:leading-[31px] text-[22px] leading-[29px];
+  }
   .mtext24 {
     @apply sm:text-[26px] sm:leading-[33px] text-[24px] leading-[31px];
   }
@@ -380,7 +411,21 @@ body {
   .atlwh_Full {
     @apply absolute top-0 left-0 w-full h-full;
   }
+
+  .green_header .nav_link {
+    @apply font-normal text-white;
+  }
+  .green_header .nav_link.active {
+    @apply font-bold text-white;
+  }
+  .nav_link {
+    @apply lg:font-semibold font-normal;
+  }
+  .nav_link.active {
+    @apply lg:text-darkblack text-white font-bold lg:font-semibold;
+  }
 }
+
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;

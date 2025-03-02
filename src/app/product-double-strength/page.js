@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "@/components/layout/Index";
-import HomePage from "@/components/home/Index";
+import ProductDoubleStrengthPage from "@/components/product-double-strength/Index";
 
 const page = () => {
   return (
-    <Layout greenHeader>
-      <HomePage />
+    <Layout>
+      <ProductDoubleStrengthPage />
     </Layout>
   );
 };

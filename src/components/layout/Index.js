@@ -2,10 +2,10 @@ import React from "react";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, greenHeader }) => {
   return (
     <>
-      <Header />
+      <Header greenHeader={greenHeader} />
       <main>{children}</main>
       {/* <Footer /> */}
     </>

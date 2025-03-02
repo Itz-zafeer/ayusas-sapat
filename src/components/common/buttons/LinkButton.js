@@ -32,7 +32,7 @@ const LinkBtn = ({
         gapping
           ? gapping
           : "lg:px-[var(--vw95)] lg:py-[var(--vw19)] px-[54.07px] py-[13px]"
-      } group font-bold group-hover:brightness-125 hover:brightness-125 block`}
+      } group font-bold group-hover:-translate-y-1 hover:-translate-y-1 group-hover:scale-105 hover:scale-105 transition-all duration-500 ease-out block`}
     >
       <span className="">{text}</span>
     </Tag>

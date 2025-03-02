@@ -3,8 +3,8 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import SwiperButtons from "./SwiperButtons";
 import useResponsivness from "@/hooks/useResponsivness";
+import SwiperButtons from "@/components/common/SwiperButtons";
 
 const formulas = [
   {
@@ -29,18 +29,14 @@ const formulas = [
   },
 ];
 const NaturalFormulas = () => {
-  const productShowcaseSwiper = useRef(null);
+  const naturalFormulasSwiper = useRef(null);
   const { isDesktop, isTablet } = useResponsivness();
   const [swiperGap, setSwiperGap] = useState(0);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+
   useEffect(() => {
-    setSwiperGap(
-      window.innerWidth >= 1025 ? (window.innerWidth / 100) * 1.98412698413 : 30
-    );
-  }, []);
-  useEffect(() => {
-    function handleResize() {
+    function updateGap() {
       setSwiperGap(
         window.innerWidth >= 1025
           ? (window.innerWidth / 100) * 1.98412698413
@@ -49,9 +45,9 @@ const NaturalFormulas = () => {
           : 30
       );
     }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    updateGap();
+    window.addEventListener("resize", updateGap);
+    return () => window.removeEventListener("resize", updateGap);
   }, []);
 
   return (
@@ -63,20 +59,11 @@ const NaturalFormulas = () => {
       <div className="lg:mt-[var(--vw100)] mt-[54px] relative">
         <Swiper
           grabCursor={isDesktop && formulas.length > 4 ? true : false}
-          onSwiper={(swiper) => {
-            productShowcaseSwiper.current = swiper;
-            setIsBeginning(swiper.isBeginning);
-            setIsEnd(swiper.isEnd);
-            swiper.on("slideChange", () => {
-              setIsBeginning(swiper.isBeginning);
-              setIsEnd(swiper.isEnd);
-            });
-          }}
+          onSwiper={(swiper) => (naturalFormulasSwiper.current = swiper)}
           navigation
           modules={[Navigation]}
           spaceBetween={swiperGap}
-          // slidesPerView={isDesktop ? 4 : isTablet ? 2 : 1.3}
-          slidesPerView={isTablet ? 2.4 : "auto"}
+          slidesPerView={"auto"}
           className=" lg:pl-[var(--vw106)] pl-5"
         >
           {formulas.map((formula, index) => (
@@ -93,25 +80,15 @@ const NaturalFormulas = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        {isDesktop && formulas.length > 4 && (
+        {((isDesktop && formulas.length > 4) ||
+          (isTablet && formulas.length > 2) ||
+          (!isDesktop && formulas.length > 1)) && (
           <SwiperButtons
-            productShowcaseSwiper={productShowcaseSwiper}
-            isBeginning={isBeginning}
-            isEnd={isEnd}
-          />
-        )}
-        {isTablet && formulas.length > 2 && (
-          <SwiperButtons
-            productShowcaseSwiper={productShowcaseSwiper}
-            isBeginning={isBeginning}
-            isEnd={isEnd}
-          />
-        )}
-        {!isDesktop && formulas.length > 1 && (
-          <SwiperButtons
-            productShowcaseSwiper={productShowcaseSwiper}
-            isBeginning={isBeginning}
-            isEnd={isEnd}
+            swiperRef={naturalFormulasSwiper}
+            colors="text-white bg-yellow"
+            positionY="-bottom-20"
+            settingPrev="right-28"
+            settingNext="right-10"
           />
         )}
       </div>
