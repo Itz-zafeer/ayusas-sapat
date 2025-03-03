@@ -10,7 +10,7 @@ const TrustedByDoctors = () => {
           Trusted by <span className="text-yellow">DOCTORS</span> for its fast
           and effective action
         </h2>
-        <div className="relative lg:size-[65.4100529101vw] size-[374px] lg:mt-[var(--vw19)] lg:mb-0 mt-[22px] mb-10">
+        <div className="relative lg:size-[65.4100529101vw] size-[95.8974358974vw] sm:size-[374px] lg:mt-[var(--vw19)] lg:mb-0 mt-[22px] mb-10">
           <Image
             fill
             alt="doctor"
