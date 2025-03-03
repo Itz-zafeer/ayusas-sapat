@@ -444,3 +444,10 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+.safe_banner {
+  background: linear-gradient(
+    249deg,
+    rgba(6, 30, 17, 0) 10.2%,
+    rgba(6, 30, 17, 0.45) 64.19%
+  );
+}

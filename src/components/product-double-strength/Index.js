@@ -9,6 +9,9 @@ import Testimonials from "../common/testimonials/Testimonials";
 import GetReliefFrom from "../common/product-page/get-relief-from/GetReliefFrom";
 import PureExtracts from "./pure-extracts/PureExtracts";
 import DoubleStrength from "./double-strength/DoubleStrength";
+import HowItWorks from "../common/product-page/how-it-works/HowItWorks";
+import SafeBanner from "../common/product-page/safe-banner/SafeBanner";
+import LungsHelp from "../common/product-page/lungs-help/LungsHelp";
 
 const ProductDoubleStrengthPage = () => {
   return (
@@ -23,6 +26,9 @@ const ProductDoubleStrengthPage = () => {
       <GetReliefFrom />
       <PureExtracts />
       <DoubleStrength />
+      <HowItWorks />
+      <SafeBanner />
+      <LungsHelp />
     </>
   );
 };
