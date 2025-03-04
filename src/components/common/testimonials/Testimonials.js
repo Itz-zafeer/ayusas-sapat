@@ -51,14 +51,14 @@ const Testimonials = ({ noHeading }) => {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide
               key={index}
-              className="lg:w-[15.2116402116vw] lg:h-[24.1402116402vw] w-[46%] sm:h-[65vw] h-[65.3846153846vw] relative cursor-pointer lg:rounded-[var(--vw20)] rounded-[14px] overflow-hidden"
+              className="group lg:w-[15.2116402116vw] lg:h-[24.1402116402vw] w-[46%] sm:h-[65vw] h-[65.3846153846vw] relative cursor-pointer lg:rounded-[var(--vw20)] rounded-[14px] overflow-hidden"
             >
               <Image
                 unoptimized
                 fill
                 alt="small_image"
                 src={testimonial}
-                className="object-cover"
+                className="group-hover:scale-105 transition-all duration-500 ease-out object-cover"
               />
             </SwiperSlide>
           ))}

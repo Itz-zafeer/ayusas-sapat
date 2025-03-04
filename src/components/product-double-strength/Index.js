@@ -12,6 +12,10 @@ import DoubleStrength from "./double-strength/DoubleStrength";
 import HowItWorks from "../common/product-page/how-it-works/HowItWorks";
 import SafeBanner from "../common/product-page/safe-banner/SafeBanner";
 import LungsHelp from "../common/product-page/lungs-help/LungsHelp";
+import ParabenFacts from "../common/product-page/paraben-facts/ParabenFacts";
+import ScienceBehindAyusas from "../common/product-page/science-behind-ayusas/ScienceBehindAyusas";
+import TrustedForYears from "../common/product-page/trusted-for-years/TrustedForYears";
+import ClinicalStudies from "../common/product-page/clinical-studies/ClinicalStudies";
 
 const ProductDoubleStrengthPage = () => {
   return (
@@ -29,6 +33,10 @@ const ProductDoubleStrengthPage = () => {
       <HowItWorks />
       <SafeBanner />
       <LungsHelp />
+      <ParabenFacts />
+      <ScienceBehindAyusas />
+      <TrustedForYears />
+      <ClinicalStudies />
     </>
   );
 };

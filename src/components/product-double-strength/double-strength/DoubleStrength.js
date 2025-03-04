@@ -68,17 +68,17 @@ const DoubleStrength = () => {
             {strengths.map((strength, index) => (
               <SwiperSlide
                 key={index}
-                className="lg:w-[19.5105820106vw] sm:w-[46.286%] w-[84.286%] cursor-pointer flex flex-col items-center text-center lg:gap-y-[var(--vw40)] gap-y-10"
+                className="group lg:w-[19.5105820106vw] sm:w-[46.286%] w-[84.286%] cursor-pointer flex flex-col items-center text-center lg:gap-y-[var(--vw40)] gap-y-10"
               >
                 <div className="lg:w-[19.5105820106vw] w-full lg:h-[29.8941798942vw] h-[452px] lg:rounded-[calc(2*var(--vw150))] rounded-[300px] overflow-hidden relative">
                   <Image
                     fill
                     alt="image"
                     src={strength.image}
-                    className="object-cover"
+                    className="group-hover:scale-105 transition-all duration-500 ease-out object-cover"
                   />
                 </div>
-                <span className="lg:text30 mtext30 font-extrabold text-white lg:w-[14.328042vw] w-[73%]">
+                <span className="lg:text30 mtext30 font-extrabold text-white lg:w-[14.328042vw] w-[76%]">
                   {strength.label}
                 </span>
               </SwiperSlide>

@@ -451,3 +451,10 @@ body {
     rgba(6, 30, 17, 0.45) 64.19%
   );
 }
+.paraben_facts_banner_overlay {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}

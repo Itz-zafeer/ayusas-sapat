@@ -3,7 +3,7 @@ import BackGrounds from "./backgrounds/BackGrounds";
 
 const SafeBanner = () => {
   return (
-    <section className="lg:min-h-[130.904817861vh] flex items-end lg:items-center lg:py-[var(--vw200)] py-[100px] min-h-[93vh] relative">
+    <section className="lg:min-h-[130.904817861vh] flex items-end lg:items-center lg:py-[var(--vw200)] py-[100px] min-h-[93vh] relative overflow-hidden">
       <BackGrounds />
       <div className="relative z-[2] w-full text-white lg:px-[var(--vw140)] px-5 flex flex-col uppercase font-extrabold">
         <div className="flex items-center">
@@ -24,7 +24,7 @@ const SafeBanner = () => {
         <span className="lg:text-vw80 lg:leading-[var(--vw99)] text-[50px] leading-[62px]">
           Effective
         </span>
-        <span className="lg:text-vw197 lg:leading-[var(--vw180)] text-[124px] leading-[110px]">
+        <span className="lg:text-vw197 lg:leading-[var(--vw180)] sm:text-[110px] sm:leading-[124px] text-[31.7948717949vw] leading-[28.2051282051vw]">
           Safe
         </span>
         <span className="lg:text60 text-[38px] leading-[47px]">
