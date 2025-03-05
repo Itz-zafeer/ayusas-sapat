@@ -315,6 +315,23 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+.poppins {
+  font-family: "Poppins";
+}
 .inter {
   font-family: "Inter";
 }
@@ -353,6 +370,9 @@ body {
   }
   .text16 {
     @apply lg:text-vw16 lg:leading-[1.15740740741vw];
+  }
+  .text18 {
+    @apply lg:text-vw18 lg:leading-[var(--vw26)];
   }
   .text20 {
     @apply lg:text-vw20 lg:leading-[var(--vw26)];
@@ -411,7 +431,12 @@ body {
   .atlwh_Full {
     @apply absolute top-0 left-0 w-full h-full;
   }
-
+  .hero_tags {
+    @apply lg:text16 mtext14 leading-[28px] lg:leading-[var(--vw28)] text-black font-medium;
+  }
+  .hero_tags a {
+    @apply text-[#F83535] font-semibold underline underline-offset-4;
+  }
   .green_header .nav_link {
     @apply font-normal text-white;
   }
@@ -457,4 +482,46 @@ body {
     rgba(0, 0, 0, 0.2) 0%,
     rgba(0, 0, 0, 0.2) 100%
   );
+}
+
+/* details  */
+
+:root {
+  interpolate-size: allow-keywords;
+}
+
+details {
+  overflow: hidden;
+}
+
+/* don't add margin/padding to this, add it to the actual
+   stuff inside the details content */
+details::details-content {
+  block-size: 0;
+  /* opacity: 0; */
+  transition: all 1s;
+  transition-behavior: allow-discrete;
+}
+
+details[open]::details-content {
+  block-size: auto;
+  /* opacity: 1; */
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+/* details  */
+
+.product_page_pagination {
+  @apply flex justify-start items-center lg:justify-center gap-3 text-black lg:text20 lg:leading-[var(--vw28)] mtext20 font-medium;
+}
+.product_page_pagination .number {
+  @apply lg:size-[var(--vw40)] lg:min-w-[var(--vw40)] size-[38px] min-w-[38px] flex items-center justify-center lg:px-[var(--vw12)] lg:py-[calc(0.5*var(--vw10))] rounded-full bg-[#F1F1F1] border-2 border-transparent cursor-pointer;
+}
+.product_page_pagination .number.active {
+  @apply border-[#3FAEFF];
 }

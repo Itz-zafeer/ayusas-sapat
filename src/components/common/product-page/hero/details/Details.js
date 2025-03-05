@@ -6,12 +6,12 @@ import Milestones from "./milestones/Milestones";
 import PricingOptions from "./pricing-options/PricingOptions";
 import LinkBtn from "@/components/common/buttons/LinkButton";
 
-const Details = () => {
+const Details = ({ content, treatmentFeatures, tags }) => {
   return (
     <div className="lg:w-[44.0476190476vw] px-5 lg:px-0">
       <Rating />
-      <Content />
-      <TreatmentFeatures />
+      <Content content={content} />
+      <TreatmentFeatures treatmentFeatures={treatmentFeatures} />
       <Milestones />
       <div className="lg:mt-[var(--vw12)] mt-5 flex flex-col lg:gap-[var(--vw12)] gap-3">
         <div className="flex lg:gap-[var(--vw88)] gap-[88px] lg:text20 mtext18 leading-[28px] lg:leading-[var(--vw28)]">
@@ -20,9 +20,10 @@ const Details = () => {
           </span>
           <span className="font-medium text-c818080">How to take</span>
         </div>
-        <p className="lg:text16 mtext14 leading-[28px lg:leading-[var(--vw28)] text-black font-medium">
-          Haldi, Yashtimadhu, Tulsi, Adulsa, Kantakari
-        </p>
+        <div
+          dangerouslySetInnerHTML={{ __html: tags }}
+          className="hero_tags"
+        ></div>
       </div>
       <PricingOptions />
       <div className="flex flex-wrap items-center lg:gap-1.5 gap-2 text-black lg:mt-[var(--vw26)] mt-9">
