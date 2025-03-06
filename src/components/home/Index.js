@@ -3,6 +3,11 @@ import Hero from "./hero/Hero";
 import Features from "./features/Features";
 import ProductShowcase from "../common/product-showcase/ProductShowcase";
 import NaturalFormulas from "./natural-formulas/NaturalFormulas";
+import Testimonials from "../common/testimonials/Testimonials";
+import TriedTested from "./tried-tested/TriedTested";
+import QualityAssurance from "../common/quality-assurance/QualityAssurance";
+import Story from "./story/Story";
+import NaturalIngredients from "./natural-ingredients/NaturalIngredients";
 const products = [
   {
     image: "/images/common/product-showcase/1.png",
@@ -32,6 +37,11 @@ const HomePage = () => {
       <Features />
       <ProductShowcase data={products} heading={"our bestsellers"} />
       <NaturalFormulas />
+      <TriedTested />
+      <Testimonials />
+      <Story />
+      <QualityAssurance />
+      <NaturalIngredients />
     </>
   );
 };

@@ -7,7 +7,7 @@ const Layout = ({ children, greenHeader }) => {
     <>
       <Header greenHeader={greenHeader} />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

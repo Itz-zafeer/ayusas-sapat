@@ -260,6 +260,13 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: block;
+}
 
 @font-face {
   font-family: "DM Sans";
@@ -329,6 +336,24 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "DM-Serif-Display";
+  src: url("/fonts/DM-Serif-Display/DMSerifDisplay-Italic.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Felixti";
+  src: url("/fonts/Felixti.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+.felixti {
+  font-family: "Felixti";
+}
 .poppins {
   font-family: "Poppins";
 }
@@ -337,6 +362,9 @@
 }
 .fenix {
   font-family: "Fenix";
+}
+.dm_serif {
+  font-family: "DM-Serif-Display";
 }
 .dm_sans {
   font-family: "DM Sans";
@@ -377,14 +405,23 @@ body {
   .text20 {
     @apply lg:text-vw20 lg:leading-[var(--vw26)];
   }
+  .text22 {
+    @apply lg:text-vw22 lg:leading-[var(--vw26)];
+  }
   .text24 {
     @apply lg:text-vw24 lg:leading-[var(--vw31)];
+  }
+  .text26 {
+    @apply lg:text-vw26 lg:leading-[var(--vw31)];
   }
   .text28 {
     @apply lg:text-vw28 lg:leading-[var(--vw36)];
   }
   .text30 {
     @apply lg:text-vw30 lg:leading-[var(--vw39)];
+  }
+  .text34 {
+    @apply lg:text-vw34 lg:leading-[var(--vw44)];
   }
   .text40 {
     @apply lg:text-vw40 lg:leading-[var(--vw52)] mtext24 font-bold;
@@ -448,6 +485,9 @@ body {
   }
   .nav_link.active {
     @apply lg:text-darkblack text-white font-bold lg:font-semibold;
+  }
+  .natural_ingredients_showcase_desc a {
+    @apply font-normal text-[#4DE287];
   }
 }
 
@@ -524,4 +564,14 @@ details > summary::-webkit-details-marker {
 }
 .product_page_pagination .number.active {
   @apply border-[#3FAEFF];
+}
+.tried_tested {
+  background: linear-gradient(90deg, #70a88a 0%, #d5f9e6 46.5%, #319660 100%);
+}
+.opacity_Hover {
+  transition: all 0.3s;
+}
+
+.opacity_Hover:hover {
+  opacity: 0.7;
 }
