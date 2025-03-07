@@ -5,7 +5,6 @@ import ProductSummary from "./product-summary/ProductSummary";
 import OrderSummary from "./order-summary/OrderSummary";
 import Header from "./Header";
 import FasterRelief from "./faster-relief/FasterRelief";
-import Footer from "./footer";
 import Total from "./Total";
 import Banner from "./Banner";
 
@@ -22,7 +21,6 @@ const Checkout = () => {
         <FasterRelief />
         <Banner />
         <Total />
-        <Footer />
       </div>
     </div>
   );
