@@ -283,6 +283,13 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;
+}
 
 @font-face {
   font-family: "DM Sans";
@@ -396,6 +403,9 @@ body {
   .text12 {
     @apply lg:text-vw12 lg:leading-[var(--vw16)];
   }
+  .text10 {
+    @apply lg:text-vw10 lg:leading-[var(--vw13)];
+  }
   .text16 {
     @apply lg:text-vw16 lg:leading-[1.15740740741vw];
   }
@@ -422,6 +432,9 @@ body {
   }
   .text34 {
     @apply lg:text-vw34 lg:leading-[var(--vw44)];
+  }
+  .text35 {
+    @apply lg:text-vw35 lg:leading-[var(--vw46)];
   }
   .text40 {
     @apply lg:text-vw40 lg:leading-[var(--vw52)] mtext24 font-bold;
@@ -574,4 +587,10 @@ details > summary::-webkit-details-marker {
 
 .opacity_Hover:hover {
   opacity: 0.7;
+}
+.slogan {
+  background: linear-gradient(180deg, #164729 0%, #8da797 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

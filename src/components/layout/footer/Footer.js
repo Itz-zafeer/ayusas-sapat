@@ -58,10 +58,10 @@ const Footer = () => {
   return (
     <footer className="lg:pt-[var(--vw96)] lg:pb-[var(--vw112)] pt-11 pb-[72px] bg-f5eee1 text-darkblack">
       <div className="myContainer flex justify-between flex-wrap gap-8">
-        <div className="lg:w-[25.1322751323vw] flex flex-col lg:gap-y-[var(--vw30)]">
+        <div className="lg:w-[25.1322751323vw] flex flex-col lg:gap-y-[var(--vw30)] gap-y-[22px]">
           <Link
             href={"/"}
-            className="block relative z-[2] lg:w-[var(--vw155)] lg:h-[var(--vw104)] sm:w-[16%] sm:h-[10vw] w-[55px] h-[37px]"
+            className="block relative z-[2] lg:w-[var(--vw155)] lg:h-[var(--vw104)] sm:w-[22%] sm:h-[10vw] w-[117px] h-[78px]"
           >
             <Image
               fill
@@ -113,7 +113,7 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-col lg:gap-y-[var(--vw40)] gap-y-[40px] lg:w-[18.8492063492vw] w-full">
+          <div className="flex flex-col lg:gap-y-[var(--vw40)] gap-y-[40px] lg:w-[18.8492063492vw] w-[81.429%]">
             <div className="flex flex-col lg:gap-y-[var(--vw20)] gap-y-[20px]">
               <h5 className="lg:text24 mtext24 font-semibold">Office name</h5>
               <p className="lg:leading-[var(--vw28)]">

@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "@/components/layout/Index";
-import HomePage from "@/components/home/Index";
+import OurStoryPage from "@/components/our-story/Index";
 
 const page = () => {
   return (
     <Layout greenHeader noCheckout>
-      <HomePage />
+      <OurStoryPage />
     </Layout>
   );
 };
