@@ -7,6 +7,7 @@ import Header from "./Header";
 import FasterRelief from "./faster-relief/FasterRelief";
 import Total from "./Total";
 import Banner from "./Banner";
+import Footer from "./Footer";
 
 const Checkout = () => {
   return (
@@ -21,6 +22,7 @@ const Checkout = () => {
         <FasterRelief />
         <Banner />
         <Total />
+        <Footer />
       </div>
     </div>
   );
