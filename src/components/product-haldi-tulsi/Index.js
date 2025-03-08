@@ -18,6 +18,7 @@ import ClinicalStudies from "../common/product-page/clinical-studies/ClinicalStu
 import ProductShowcase from "../common/product-showcase/ProductShowcase";
 import Faqs from "../common/product-page/faqs/Faqs";
 import CustomerReviews from "../common/product-page/customer-reviews/CustomerReviews";
+import PureExtracts from "../product-double-strength/pure-extracts/PureExtracts";
 const productImages = [
   "/images/product-haldi-tulsi/hero/image-slider/1.jpg",
   "/images/product-haldi-tulsi/hero/image-slider/2.jpg",
@@ -133,6 +134,7 @@ const ProductHaldiTulsiPage = () => {
       <Testimonials />
       <GetReliefFrom />
       <AirQualityStats />
+      <PureExtracts />
       <FeatureHighlight />
       <KeyBenefitsBar />
       <TulsiBenefitsChart />

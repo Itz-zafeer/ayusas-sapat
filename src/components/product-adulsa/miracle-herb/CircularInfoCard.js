@@ -6,8 +6,8 @@ const CircularInfoCard = ({
   contentWrapperClasses,
   heading,
   desc,
-  headingClasses,
   image,
+  headingClasses,
   descClasses,
 }) => {
   return (
