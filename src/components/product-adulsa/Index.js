@@ -15,6 +15,7 @@ import ProductShowcase from "../common/product-showcase/ProductShowcase";
 import Faqs from "../common/product-page/faqs/Faqs";
 import CustomerReviews from "../common/product-page/customer-reviews/CustomerReviews";
 import MiracleHerb from "./miracle-herb/MiracleHerb";
+import PureExtracts from "./pure-extracts/PureExtracts";
 const productImages = [
   "/images/product-adulsa/hero/image-slider/1.jpg",
   "/images/product-adulsa/hero/image-slider/2.jpg",
@@ -101,6 +102,7 @@ const ProductAdulsaPage = () => {
       <QualityAssurance />
       <Testimonials />
       <GetReliefFrom />
+      <PureExtracts />
       <MiracleHerb />
       <HowItWorks />
       <SafeBanner />
