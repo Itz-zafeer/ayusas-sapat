@@ -2,10 +2,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import Image from "next/image";
-import SwiperButtons from "@/components/common/SwiperButtons";
 import useResponsivness from "@/hooks/useResponsivness";
 import FsLightbox from "fslightbox-react";
+import SwiperButtons from "../SwiperButtons";
+
 const testimonials = [
   {
     video: {
@@ -38,6 +38,7 @@ const testimonials = [
     },
   },
 ];
+
 const Testimonials = ({ noHeading }) => {
   const videoUrls = testimonials.map((item) => item.video.src);
   const [toggler, setToggler] = useState(false);
@@ -45,7 +46,8 @@ const Testimonials = ({ noHeading }) => {
   const testimonialsSlider = useRef(null);
   const { isDesktop, isTablet } = useResponsivness();
   const [swiperGap, setSwiperGap] = useState(0);
-  const [activeVideo, setActiveVideo] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
+  const videoRefs = useRef([]); // Store multiple refs for each video
 
   useEffect(() => {
     function updateGap() {
@@ -61,21 +63,30 @@ const Testimonials = ({ noHeading }) => {
     window.addEventListener("resize", updateGap);
     return () => window.removeEventListener("resize", updateGap);
   }, []);
-  const videoRef = useRef(null);
 
-  const handleMouseEnter = () => {
-    if (activeVideo && activeVideo !== videoRef.current) {
-      activeVideo.pause();
-      activeVideo.currentTime = 0; // Reset previous video
+  const handleMouseEnter = (index) => {
+    // Pause/reset all other videos
+    videoRefs.current.forEach((video, i) => {
+      if (video && i !== index) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+
+    // Play the hovered video
+    if (videoRefs.current[index]) {
+      videoRefs.current[index].play();
     }
-    setActiveVideo(videoRef.current);
-    videoRef.current.play();
+    setActiveIndex(index);
   };
 
-  const handleMouseLeave = () => {
-    videoRef.current.pause();
-    videoRef.current.currentTime = 0;
+  const handleMouseLeave = (index) => {
+    if (videoRefs.current[index]) {
+      videoRefs.current[index].pause();
+      videoRefs.current[index].currentTime = 0;
+    }
   };
+
   return (
     <>
       <section className="lg:py-[var(--vw90)] py-[43px]">
@@ -96,30 +107,24 @@ const Testimonials = ({ noHeading }) => {
             {testimonials.map((testimonial, index) => (
               <SwiperSlide
                 onClick={() => {
-                  setSlideIndex(index);
+                  setSlideIndex(index + 1);
                   setToggler(!toggler);
                 }}
                 key={index}
                 className="group lg:w-[15.2116402116vw] lg:h-[24.1402116402vw] w-[46%] sm:h-[65vw] h-[65.3846153846vw] relative cursor-pointer lg:rounded-[var(--vw20)] rounded-[14px] overflow-hidden"
               >
-                {/* <Image
-                unoptimized
-                fill
-                alt="small_image"
-                src={testimonial}
-                className="group-hover:scale-105 transition-all duration-500 ease-out object-cover"
-              /> */}
                 <video
-                  ref={videoRef}
+                  ref={(el) => (videoRefs.current[index] = el)}
                   src={testimonial?.video?.src}
                   poster={testimonial?.video?.poster}
                   className="object-cover absolute inset-0 size-full group-hover:scale-[1.04] transition-all duration-500"
-                  preload="auto"
+                  preload="none" // Prevents video from loading automatically
                   loading="lazy"
                   loop
                   muted
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
+                  controls={false}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={() => handleMouseLeave(index)}
                 ></video>
               </SwiperSlide>
             ))}
