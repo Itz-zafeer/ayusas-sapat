@@ -594,3 +594,16 @@ details > summary::-webkit-details-marker {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.checkout {
+  animation: checkout_fade 250ms linear forwards;
+  animation-delay: 300ms;
+}
+@keyframes checkout_fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
