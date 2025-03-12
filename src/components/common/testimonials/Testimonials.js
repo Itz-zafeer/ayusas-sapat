@@ -5,6 +5,7 @@ import { Navigation } from "swiper/modules";
 import useResponsivness from "@/hooks/useResponsivness";
 import FsLightbox from "fslightbox-react";
 import SwiperButtons from "../SwiperButtons";
+import MyLightBox from "../MyLightBox/Index";
 
 const testimonials = [
   {
@@ -41,12 +42,13 @@ const testimonials = [
 
 const Testimonials = ({ noHeading }) => {
   const videoUrls = testimonials.map((item) => item.video.src);
-  const [toggler, setToggler] = useState(false);
-  const [slideIndex, setSlideIndex] = useState(1);
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [showLightBox, setShowLightBox] = useState(false);
+  const [showNow, setShowNow] = useState(false);
   const testimonialsSlider = useRef(null);
   const { isDesktop, isTablet } = useResponsivness();
-  const [swiperGap, setSwiperGap] = useState(0);
   const [activeIndex, setActiveIndex] = useState(null);
+  const [swiperGap, setSwiperGap] = useState(0);
   const videoRefs = useRef([]); // Store multiple refs for each video
 
   useEffect(() => {
@@ -86,7 +88,24 @@ const Testimonials = ({ noHeading }) => {
       videoRefs.current[index].currentTime = 0;
     }
   };
-
+  const handleOpen = () => {
+    setShowLightBox(true);
+    if (!showLightBox) {
+      setTimeout(() => {
+        const container = document.querySelector(".lightboxContainer");
+        container.classList.remove("opacity-0");
+        container.classList.remove("pointer-events-none");
+        setShowNow(true);
+      }, 1500);
+    } else {
+      const container = document.querySelector(".lightboxContainer");
+      container.classList.remove("opacity-0");
+      container.classList.remove("pointer-events-none");
+      setTimeout(() => {
+        setShowNow(true);
+      }, 1500);
+    }
+  };
   return (
     <>
       <section className="lg:py-[var(--vw90)] py-[43px]">
@@ -106,10 +125,7 @@ const Testimonials = ({ noHeading }) => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide
-                onClick={() => {
-                  setSlideIndex(index + 1);
-                  setToggler(!toggler);
-                }}
+                onClick={() => handleOpen(index)}
                 key={index}
                 className="group lg:w-[15.2116402116vw] lg:h-[24.1402116402vw] w-[46%] sm:h-[65vw] h-[65.3846153846vw] relative cursor-pointer lg:rounded-[var(--vw20)] rounded-[14px] overflow-hidden"
               >
@@ -143,7 +159,15 @@ const Testimonials = ({ noHeading }) => {
           ) : null}
         </div>
       </section>
-      <FsLightbox toggler={toggler} slide={slideIndex} sources={videoUrls} />
+      {showLightBox && (
+        <MyLightBox
+          slideNo={slideIndex}
+          autoPlay
+          showNow={showNow}
+          setShowNow={setShowNow}
+          sources={videoUrls.map((src) => ({ source: src, type: "video" }))}
+        />
+      )}
     </>
   );
 };
