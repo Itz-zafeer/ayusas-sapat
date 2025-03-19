@@ -11,6 +11,16 @@ const Details = ({ content, treatmentFeatures, tags }) => {
     <div className="lg:w-[44.0476190476vw] px-5 lg:px-0">
       <Rating />
       <Content content={content} />
+      <div className="flex items-center lg:gap-[var(--vw8)] gap-2 lg:mt-[var(--vw12)] mt-3">
+        <span className="lg:text20 mtext18 text-black font-semibold capitalize">
+          FLAVOUR: Orange
+        </span>
+        <img
+          src="/images/product-lozenges/hero/details/flavour.png"
+          alt="flavour"
+          className="lg:w-[var(--vw45)] w-6"
+        />
+      </div>
       <TreatmentFeatures treatmentFeatures={treatmentFeatures} />
       <Milestones />
       <div className="lg:mt-[var(--vw12)] mt-5 flex flex-col lg:gap-[var(--vw12)] gap-3">

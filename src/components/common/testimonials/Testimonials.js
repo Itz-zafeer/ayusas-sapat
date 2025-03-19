@@ -40,7 +40,14 @@ const testimonials = [
   },
 ];
 
-const Testimonials = ({ noHeading }) => {
+const Testimonials = ({
+  noHeading,
+  headingClasses,
+  title1,
+  title2,
+  title2Classes,
+  sectionClasses,
+}) => {
   const videoUrls = testimonials.map((item) => item.video.src);
   const [slideIndex, setSlideIndex] = useState(0);
   const [showLightBox, setShowLightBox] = useState(false);
@@ -108,10 +115,25 @@ const Testimonials = ({ noHeading }) => {
   };
   return (
     <>
-      <section className="lg:py-[var(--vw90)] py-[43px]">
+      <section
+        className={`${
+          sectionClasses ? sectionClasses : "lg:py-[var(--vw90)] py-[43px]"
+        }`}
+      >
         {noHeading || (
-          <h2 className="text60 myContainer text-center capitalize lg:mb-[var(--vw50)] mb-6">
-            Why people trust us
+          <h2
+            className={`${headingClasses ? headingClasses : ""} ${
+              title2 ? "font-normal" : "font-bold"
+            } lg:text-vw60 lg:leading-[var(--vw78)] mtext24 myContainer text-center capitalize lg:mb-[var(--vw50)] mb-6`}
+          >
+            {title1}{" "}
+            {title2 && (
+              <span
+                className={`${title2Classes ? title2Classes : ""} font-bold`}
+              >
+                {title2}
+              </span>
+            )}
           </h2>
         )}
         <div className="relative lg:myContainer">

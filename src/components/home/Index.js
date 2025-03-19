@@ -38,7 +38,7 @@ const HomePage = () => {
       <ProductShowcase data={products} heading={"our bestsellers"} />
       <NaturalFormulas />
       <TriedTested />
-      <Testimonials />
+      <Testimonials noHeading />
       <Story />
       <QualityAssurance />
       <NaturalIngredients />

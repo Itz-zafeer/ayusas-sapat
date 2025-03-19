@@ -100,7 +100,7 @@ const ProductAdulsaPage = () => {
       />
       <MarqueeSlider />
       <QualityAssurance />
-      <Testimonials />
+      <Testimonials title1={"Why people trust us"} />
       <GetReliefFrom />
       <PureExtracts />
       <MiracleHerb />

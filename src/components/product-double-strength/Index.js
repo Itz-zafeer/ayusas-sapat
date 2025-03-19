@@ -149,7 +149,7 @@ const ProductDoubleStrengthPage = () => {
       <CycleOfCough />
       <PowerFulRelief />
       <TrustedByDoctors />
-      <Testimonials />
+      <Testimonials title1={"Why people trust us"} />
       <GetReliefFrom />
       <PureExtracts />
       <DoubleStrength />

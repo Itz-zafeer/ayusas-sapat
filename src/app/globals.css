@@ -275,6 +275,13 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM-Sans/DMSans-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: block;
+}
 
 @font-face {
   font-family: "DM Sans";
@@ -358,6 +365,44 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "Work-Sans";
+  src: url("/fonts/Work-Sans/WorkSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Work-Sans";
+  src: url("/fonts/Work-Sans/WorkSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Work-Sans";
+  src: url("/fonts/Work-Sans/WorkSans-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;
+}
+@font-face {
+  font-family: "Work-Sans";
+  src: url("/fonts/Work-Sans/WorkSans-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Work-Sans";
+  src: url("/fonts/Work-Sans/WorkSans-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: block;
+}
+.work_sans {
+  font-family: "Work-Sans";
+}
 .felixti {
   font-family: "Felixti";
 }
@@ -429,6 +474,9 @@ body {
   }
   .text30 {
     @apply lg:text-vw30 lg:leading-[var(--vw39)];
+  }
+  .text32 {
+    @apply lg:text-vw32 lg:leading-[var(--vw46)];
   }
   .text34 {
     @apply lg:text-vw34 lg:leading-[var(--vw44)];
