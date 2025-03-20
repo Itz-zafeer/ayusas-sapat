@@ -3,8 +3,8 @@ import React from "react";
 
 const InstantRelief = () => {
   return (
-    <div className="flex flex-wrap justify-center w-full lg:justify-between lg:px-[var(--vw55)] relative lg:pb-[var(--vw73)] work_sans overflow-hidden">
-      <div className="atlwh_Full pointer-events-none">
+    <div className="flex flex-wrap justify-center w-full lg:justify-between lg:px-[var(--vw55)] relative work_sans">
+      <div className="atlwh_Full pointer-events-none overflow-hidden">
         <img
           src="/images/product-lozenges/instant-relief/text.png"
           alt="text"
@@ -16,6 +16,11 @@ const InstantRelief = () => {
           className="absolute lg:top-[-70%] sm:top-[-56%] top-[-32%] right-5 lg:w-[33.9947089947vw] w-[45%]"
         />
       </div>
+      <img
+        src="/images/product-lozenges/actions/art/3.png"
+        alt="art"
+        className="absolute lg:bottom-[-86%] sm:bottom-[-84%] bottom-[-63%] left-0 lg:w-[23.4788359788vw] w-[45%]"
+      />
       <div className="flex flex-col lg:pt-[21.2301587302vw] pt-[30.7692307692vw] w-[89.744%] lg:w-auto">
         <span className="text60 !font-medium text-white">
           with the goodness of

@@ -14,6 +14,7 @@ import Faqs from "../common/product-page/faqs/Faqs";
 import CustomerReviews from "../common/product-page/customer-reviews/CustomerReviews";
 import TrustedForYears from "../common/product-page/trusted-for-years/TrustedForYears";
 import ParabenFacts from "../common/product-page/paraben-facts/ParabenFacts";
+import ScienceBehind from "./science-behind/ScienceBehind";
 
 const productImages = [
   "/images/product-lozenges/hero/image-slider/1.jpg",
@@ -136,6 +137,7 @@ const ProductLozengesPage = () => {
           headingColor={"text-white"}
           headingPosition={"text-end"}
         />
+        <ScienceBehind />
       </div>
       <ProductShowcase
         data={frequentlyBought}
