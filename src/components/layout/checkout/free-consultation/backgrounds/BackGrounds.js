@@ -37,7 +37,7 @@ const BackGrounds = () => {
           <img
             src="/images/checkout/consultation/fruits/mob1.png"
             alt="fruits"
-            className="absolute bottom-0 lg:right-[var(--vw180)] sm:right-[300px] right-[98px] lg:w-[var(--vw148)] w-[82] lg:hidden block"
+            className="absolute bottom-0 lg:right-[var(--vw180)] sm:right-[300px] right-[98px] lg:w-[var(--vw148)] w-[82px] lg:hidden block"
           />
         </div>
         <div className="atlwh_Full">

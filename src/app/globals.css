@@ -487,6 +487,9 @@ body {
   .text40 {
     @apply lg:text-vw40 lg:leading-[var(--vw52)] mtext24 font-bold;
   }
+  .text45 {
+    @apply lg:text-vw45 lg:leading-[var(--vw59)] mtext20;
+  }
   .text50 {
     @apply lg:text-vw50 lg:leading-[var(--vw65)] mtext24 font-bold;
   }
