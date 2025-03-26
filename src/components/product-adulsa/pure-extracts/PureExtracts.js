@@ -13,11 +13,11 @@ const PureExtracts = () => {
         <Content />
         <div className="lg:w-[70.9656084656vw] w-[96%] mx-auto flex justify-between relative lg:pb-[var(--vw133)] pb-[18.4615384615vw]">
           <ul
-            className={`flex flex-col items-start lg:w-[19.6428571429vw] w-[34.6153846154vw] lg:pt-[var(--vw175)] pt-[14.1025641026vw]`}
+            className={`flex flex-col items-start lg:w-[19.6428571429vw] w-[34.6153846154vw] lg:pt-[var(--vw104)] pt-[18.9743589744vw]`}
           >
             <IngredientDetail
               heading={"Adulsa"}
-              desc={` (Vasicine) 400mg <br /> Relaxes the airways `}
+              desc={` (Vasicine) <br /> Relaxes the airways `}
               lineClasses={"lg:w-[33.9947089947vw] left-0 hidden lg:block"}
               headingClasses={`lg:pr-[var(--vw12)]`}
               indicatorImage={
@@ -30,17 +30,29 @@ const PureExtracts = () => {
 
             <IngredientDetail
               wrapperClasses={
-                "lg:mt-[var(--vw171)] mt-[36.1538461538vw] w-[20.2564102564vw] lg:w-[unset]"
+                "lg:mt-[var(--vw197)] mt-[18.4615384615vw] !w-[20.2564102564vw] lg:!w-full"
               }
               heading={"Haldi"}
-              desc={`        (curcumin) 60mg <br /> Reduces Inflammation
+              desc={`        (curcumin) <br /> Reduces Inflammation
 
 `}
               lineClasses={"lg:w-[33.9947089947vw] left-0 w-[36vw]"}
               headingClasses={`lg:pr-[var(--vw12)] pr-[3.07692307692vw]`}
             />
+            <IngredientDetail
+              heading={"Tulsi"}
+              desc={`(Urosolic acid) <br /> Clears Mucus & Relieve Congestion`}
+              lineClasses={"lg:w-[26.994709vw] right-0"}
+              wrapperClasses={`lg:pl-[var(--vw12)] lg:mt-[var(--vw99)] ml-[10.5128205128vw] mt-[12.0512820513vw] lg:hidden flex`}
+              indicatorImage={
+                "/images/product-double-strength/pure-extracts/mob-shapes/5.png"
+              }
+              indicatorImageClasses={
+                "w-[24.6153846154vw] min-w-[24.6153846154vw] top-0 right-[-25.641025641vw] lg:hidden"
+              }
+            />
           </ul>
-          <div className="absolute z-[2] left-1/2 -translate-x-1/2 lg:w-[45.8333333333vw] lg:h-[53.7037037037vw] h-[65.8974358974vw] w-[56.4102564103vw] lg:-top-[var(--vw95)] top-[19.358974vw]">
+          <div className="absolute z-[2] left-1/2 -translate-x-1/2 lg:w-[45.8333333333vw] lg:h-[53.7037037037vw] h-[65.8974358974vw] w-[56.4102564103vw] lg:-top-[var(--vw95)] top-[24.358974359vw]">
             <Image
               fill
               alt="product"
@@ -57,11 +69,11 @@ const PureExtracts = () => {
             />
           </div>
           <ul
-            className={`flex flex-col items-end lg:w-[18.0555555556vw] w-[34.6153846154vw] lg:pt-[var(--vw78)] pt-[5.89743589744vw]`}
+            className={`flex flex-col items-end lg:w-[18.0555555556vw] w-[34.6153846154vw] lg:pt-[var(--vw78)] pt-[9.23076923077vw]`}
           >
             <IngredientDetail
               heading={"Yashtimadhu"}
-              desc={`(Glycyrrhizin) 300mg Soothes & protects the throat`}
+              desc={`(Glycyrrhizin) Soothes & protects the throat`}
               lineClasses={"lg:w-[26.994709vw] right-0 hidden lg:block"}
               wrapperClasses={`lg:pl-[var(--vw12)] pl-[3.07692307692vw]`}
               indicatorImage={
@@ -73,13 +85,13 @@ const PureExtracts = () => {
             />
             <IngredientDetail
               heading={"Kantakari"}
-              desc={`(Solasodine) 200mg <br /> Breaks down thick mucus`}
+              desc={`(Solasodine) <br /> Breaks down thick mucus`}
               lineClasses={"lg:w-[26.994709vw] w-[40vw] right-0"}
-              wrapperClasses={`lg:pl-[var(--vw12)] pl-[3.07692307692vw] lg:mt-[var(--vw99)] mt-[26.4102564103vw] lg:!w-full !w-[24.8717948718vw]`}
+              wrapperClasses={`lg:pl-[var(--vw12)] pl-[3.07692307692vw] lg:mt-[var(--vw99)] mt-[28.2051282051vw] lg:!w-full !w-[24.8717948718vw]`}
             />
             <IngredientDetail
               heading={"Tulsi"}
-              desc={`(Urosolic acid) 100mg <br /> Clears Mucus & Relieve Congestion`}
+              desc={`(Urosolic acid) <br /> Clears Mucus & Relieve Congestion`}
               lineClasses={"lg:w-[26.994709vw] right-0"}
               wrapperClasses={`lg:pl-[var(--vw12)] lg:mt-[var(--vw99)] hidden lg:flex`}
             />
