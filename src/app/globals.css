@@ -532,6 +532,16 @@ body {
   .atlwh_Full {
     @apply absolute top-0 left-0 w-full h-full;
   }
+
+  .contact_policies_content {
+    @apply lg:text18 mtext18 flex flex-col lg:gap-y-[0.34722222222vw] gap-y-2 myContainer text-black;
+  }
+  .contact_policies_content h3 {
+    @apply lg:text32 mtext24 uppercase font-bold lg:mt-[var(--vw20)] mt-4 text-green;
+  }
+  .contact_policies_content a {
+    @apply text-green font-semibold hover:opacity-60 transition;
+  }
   .hero_tags {
     @apply lg:text16 mtext14 leading-[28px] lg:leading-[var(--vw28)] text-black font-medium;
   }
@@ -552,6 +562,47 @@ body {
   }
   .natural_ingredients_showcase_desc a {
     @apply font-normal text-[#4DE287];
+  }
+  ul.defaultList,
+  .defaultList ul {
+    @apply list-disc;
+  }
+  ol.defaultList,
+  .defaultList ol {
+    @apply list-decimal;
+  }
+  ol.defaultList[data-type="a"],
+  .defaultList ol[data-type="a"] {
+    list-style-type: lower-alpha;
+  }
+  ol.defaultList[data-type="A"],
+  .defaultList ol[data-type="A"] {
+    list-style-type: upper-alpha;
+  }
+  ol.defaultList[data-type="i"],
+  .defaultList ol[data-type="i"] {
+    list-style-type: lower-roman;
+  }
+  ol.defaultList[data-type="I"],
+  .defaultList ol[data-type="I"] {
+    list-style-type: upper-roman;
+  }
+
+  ol.defaultList li::marker,
+  .defaultList ol li::marker {
+    color: inherit;
+    font-size: inherit;
+  }
+  ul.defaultList li::marker,
+  .defaultList ul li::marker {
+    color: inherit;
+    font-size: initial;
+  }
+  ul.defaultList,
+  ol.defaultList,
+  .defaultList ul,
+  .defaultList ol {
+    @apply lg:pl-[1.66666666667vw] pl-[25px];
   }
 }
 

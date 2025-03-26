@@ -43,6 +43,10 @@ const navigations = [
         link: "/shipping-policy",
       },
       {
+        label: "Contact Us",
+        link: "/contact-us",
+      },
+      {
         label: "Privacy policy",
         link: "/privacy-policy",
       },
