@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="minfullVh minfullSvh flex items-end lg:py-[25.9694477086vh] pt-[105px] relative">
+    <section className="minfullVh minfullSvh relative flex items-end pt-[105px] lg:py-[25.9694477086vh]">
       <BackGrounds />
-      <div className="flex flex-col w-full">
+      <div className="flex w-full flex-col">
         <Content />
-        <div className="lg:hidden w-full h-[91.0256410256vw] sm:w-[82%] sm:h-[62vw] relative ml-auto">
+        <div className="relative ml-auto h-[91.0256410256vw] w-full sm:h-[62vw] sm:w-[82%] lg:hidden">
           <Image
             fill
             alt="characters"
@@ -17,7 +17,7 @@ const Hero = () => {
             className="object-cover"
           />
         </div>
-        <div className="absolute bottom-0 lg:left-[var(--vw35)] left-0 lg:w-[63.4547591069vh] lg:h-[26.3219741481vh] w-[56.669%] h-[24.358974359vw]">
+        <div className="absolute bottom-0 left-0 h-[24.358974359vw] w-[56.669%] lg:left-[var(--vw35)] lg:h-[26.3219741481vh] lg:w-[63.4547591069vh]">
           <Image
             fill
             alt="products"
@@ -28,7 +28,7 @@ const Hero = () => {
             fill
             alt="products"
             src={"/images/home/hero/mob_products.png"}
-            className="lg:hidden block"
+            className="block lg:hidden"
           />
         </div>
       </div>

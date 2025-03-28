@@ -4,33 +4,39 @@ const features = [
   {
     icon: "/images/home/features/1.svg",
     title: "NON DROWSY",
+    classes: "lg:size-[var(--vw99)] size-10",
   },
   {
     icon: "/images/home/features/2.svg",
-    title: "PARABEN FREE",
+    title: "POTENT ACTIVES",
+    classes: "lg:size-[var(--vw126)] size-[51px]",
   },
   {
     icon: "/images/home/features/3.svg",
     title: "NO ARTIFICIAL COLORS",
+    classes: "lg:size-[var(--vw85)] size-9",
   },
   {
     icon: "/images/home/features/4.svg",
     title: "CHILD SAFE",
+    classes: "lg:size-[var(--vw112)] size-[45px]",
   },
   {
     icon: "/images/home/features/5.svg",
-    title: "STANDARDIZED NATURO ACTIVES",
+    title: "PARABEN FREE",
+    classes: "lg:size-[var(--vw82)] size-[35px]",
   },
   {
     icon: "/images/home/features/6.svg",
-    title: "FREE FROM HEAVY METALS",
+    title: "NO HEAVY METALS",
+    classes: "lg:size-[var(--vw82)] size-9",
   },
 ];
 
 const Features = () => {
   return (
-    <section className="lg:pb-[var(--vw104)] lg:pt-[var(--vw77)] pt-6 pb-8">
-      <div className="myContainer flex justify-center flex-wrap lg:gap-[var(--vw42)] gap-[14px] lg:py-[var(--vw70)] py-[50px] lg:w-[85.582010582vw] border border-darkblack lg:rounded-[var(--vw30)] rounded-[20px]">
+    <section className="bg-darkgreen py-7 lg:py-[var(--vw107)]">
+      <div className="flex flex-wrap justify-center gap-7 px-5 lg:gap-[var(--vw30)] lg:px-[var(--vw46)] w-full">
         {features.map((feature, index) => (
           <Feature key={index} feature={feature} />
         ))}

@@ -8,6 +8,7 @@ import TriedTested from "./tried-tested/TriedTested";
 import QualityAssurance from "../common/quality-assurance/QualityAssurance";
 import Story from "./story/Story";
 import NaturalIngredients from "./natural-ingredients/NaturalIngredients";
+import Location from "./location/Location";
 const products = [
   {
     image: "/images/common/product-showcase/1.png",
@@ -42,6 +43,7 @@ const HomePage = () => {
       <Story />
       <QualityAssurance />
       <NaturalIngredients />
+      <Location />
     </>
   );
 };

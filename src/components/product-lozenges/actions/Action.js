@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Action = ({ action }) => {
   return (
-    <div className="flex items-center lg:gap-[var(--vw30)] gap-4">
-      <div className="lg:size-[var(--vw125)] lg:min-w-[var(--vw125)] size-[60px] min-w-[60px] bg-white rounded-full flex items-center justify-center">
-        <div className="lg:size-[var(--vw82)] size-[32px] relative">
+    <div className="flex items-center gap-4 lg:gap-[var(--vw30)]">
+      <div className="flex size-[60px] min-w-[60px] items-center justify-center rounded-full bg-white lg:size-[var(--vw125)] lg:min-w-[var(--vw125)]">
+        <div className="relative size-[32px] lg:size-[var(--vw82)]">
           <Image fill alt="icon" src={action.icon} />
         </div>
       </div>
