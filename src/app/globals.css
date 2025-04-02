@@ -566,6 +566,16 @@ body {
   .natural_ingredients_showcase_desc a {
     @apply font-normal text-[#4DE287];
   }
+  .home_hero_swiper .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    @apply lg:!bottom-[5.64042303173vh] !bottom-12;
+  }
+  .home_hero_swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply !bg-white;
+  }
+  .home_hero_swiper .swiper-pagination-bullet {
+    @apply lg:!size-[2.58519388954vh] !size-5 !bg-[#999999] !opacity-100 !mx-1.5;
+  }
   ul.defaultList,
   .defaultList ul {
     @apply list-disc;

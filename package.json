@@ -16,7 +16,7 @@
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
     "react-youtube": "^10.1.0",
-    "swiper": "^11.2.4"
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
