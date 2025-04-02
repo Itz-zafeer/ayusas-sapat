@@ -35,7 +35,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="bg-darkgreen py-7 lg:py-[var(--vw107)]">
+    <section className="bg-f5eee1 py-7 lg:py-[var(--vw102)]">
       <div className="flex flex-wrap justify-center gap-7 px-5 lg:gap-[var(--vw30)] lg:px-[var(--vw46)] w-full">
         {features.map((feature, index) => (
           <Feature key={index} feature={feature} />

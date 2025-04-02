@@ -4,8 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import useResponsivness from "@/hooks/useResponsivness";
 import FsLightbox from "fslightbox-react";
-import SwiperButtons from "../SwiperButtons";
-import MyLightBox from "../MyLightBox/Index";
+import MyLightBox from "@/components/common/MyLightBox/Index";
+import SwiperButtons from "@/components/common/SwiperButtons";
 
 const testimonials = [
   {
@@ -40,14 +40,7 @@ const testimonials = [
   },
 ];
 
-const Testimonials = ({
-  noHeading,
-  headingClasses,
-  title1,
-  title2,
-  title2Classes,
-  sectionClasses,
-}) => {
+const Testimonials = () => {
   const videoUrls = testimonials.map((item) => item.video.src);
   const [slideIndex, setSlideIndex] = useState(0);
   const [showLightBox, setShowLightBox] = useState(false);
@@ -116,27 +109,18 @@ const Testimonials = ({
   return (
     <>
       <section
-        className={`${
-          sectionClasses ? sectionClasses : "lg:py-[var(--vw90)] py-[43px]"
-        }`}
+        className={
+          "flex flex-wrap justify-between gap-6 lg:pl-[var(--vw100)] lg:py-[var(--vw48)] pt-12"
+        }
       >
-        {noHeading || (
-          <h2
-            className={`${headingClasses ? headingClasses : ""} ${
-              title2 ? "font-normal" : "font-bold"
-            } lg:text-vw60 lg:leading-[var(--vw78)] mtext24 myContainer text-center capitalize lg:mb-[var(--vw50)] mb-6`}
-          >
-            {title1}{" "}
-            {title2 && (
-              <span
-                className={`${title2Classes ? title2Classes : ""} font-bold`}
-              >
-                {title2}
-              </span>
-            )}
-          </h2>
-        )}
-        <div className="relative lg:myContainer">
+        <div className="flex flex-col lg:items-start lg:text-start items-center text-center lg:w-[20.5026455026vw] w-[89.744%] mx-auto lg:mx-0 text-darkblack lg:text50 mtext30 !font-medium">
+          <span>Tried & Tested By </span>
+          <span className="bg-green text-white lg:text-vw70 lg:leading-[var(--vw90)] text-[40px] leading-[52px]">
+            50 Lakh+{" "}
+          </span>
+          <span>Customers</span>
+        </div>
+        <div className="relative lg:w-[66.8650793651vw] w-full pb-3 lg:pb-0">
           <Swiper
             onSwiper={(swiper) => (testimonialsSlider.current = swiper)}
             navigation
@@ -168,15 +152,15 @@ const Testimonials = ({
             ))}
           </Swiper>
 
-          {(isDesktop && testimonials.length > 5) ||
+          {(isDesktop && testimonials.length > 3) ||
           (isTablet && testimonials.length > 2) ||
           (!isDesktop && testimonials.length > 2) ? (
             <SwiperButtons
               swiperRef={testimonialsSlider}
               colors={"text-white bg-darkblack"}
               positionY={"transform top-1/2 -translate-y-1/2"}
-              settingPrev={"left-0"}
-              settingNext={"right-0"}
+              settingPrev={"left-10"}
+              settingNext={"right-10"}
             />
           ) : null}
         </div>

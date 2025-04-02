@@ -41,8 +41,8 @@ const NaturalFormulas = () => {
         window.innerWidth >= 1025
           ? (window.innerWidth / 100) * 1.98412698413
           : window.innerWidth >= 641
-          ? 40
-          : 30
+            ? 40
+            : 30
       );
     }
     updateGap();
@@ -51,8 +51,8 @@ const NaturalFormulas = () => {
   }, []);
 
   return (
-    <section className="bg-c0f3e25 lg:pt-[var(--vw110)] lg:pb-[var(--vw180)] py-[82.5px]">
-      <h2 className="text60 text-yellow capitalize text-center lg:myContainer w-[74.744%] mx-auto">
+    <section className="bg-f5eee1 lg:pb-[var(--vw110)] pb-10">
+      <h2 className="text50 capitalize lg:myContainer w-[74.744%] mx-auto">
         Natural Formulas To Help With
       </h2>
 
@@ -74,7 +74,7 @@ const NaturalFormulas = () => {
               <div className="relative size-[303px] sm:size-[230px] lg:size-[20.0396825397vw] rounded-full overflow-hidden">
                 <Image fill alt="image" src={formula.image} />
               </div>
-              <span className="text-white lg:text30 mtext30">
+              <span className="text-darkblack lg:text30 mtext30">
                 {formula.title}
               </span>
             </SwiperSlide>
