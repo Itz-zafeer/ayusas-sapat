@@ -496,6 +496,9 @@ body {
   .text60 {
     @apply lg:text-vw60 lg:leading-[var(--vw78)] mtext24 font-bold;
   }
+  .text70 {
+    @apply lg:text-vw70 lg:leading-[var(--vw78)] mtext24 font-black capitalize;
+  }
   .text18 {
     @apply lg:text-vw18 lg:leading-[var(--vw23)] mtext18;
   }
