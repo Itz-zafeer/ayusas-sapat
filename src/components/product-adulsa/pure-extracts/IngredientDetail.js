@@ -9,6 +9,7 @@ const IngredientDetail = ({
   lineClasses,
   indicatorImageClasses,
   indicatorImage,
+  bg,
 }) => {
   return (
     <li
@@ -34,7 +35,7 @@ const IngredientDetail = ({
         <span
           className={`${
             headingClasses ? headingClasses : ""
-          } lg:text40 text-[4.10256410256vw] font-bold bg-f5eee1 relative inline-block break-all whitespace-normal`}
+          } lg:text40 text-[4.10256410256vw] font-bold ${bg ? bg : "bg-f5eee1"} relative inline-block break-all whitespace-normal`}
         >
           {heading}
         </span>

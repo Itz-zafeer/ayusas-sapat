@@ -100,10 +100,12 @@ const ProductAdulsaPage = () => {
       />
       <MarqueeSlider />
       <QualityAssurance />
-      <Testimonials title1={"Why people trust us"} />
-      <GetReliefFrom />
-      <PureExtracts />
-      <MiracleHerb />
+      <div className="bg-[#CAE1B4]">
+        <Testimonials title1={"Why people trust us"} />
+        <GetReliefFrom />
+        <PureExtracts bg={"bg-[#CAE1B4]"} />
+        <MiracleHerb />
+      </div>
       <HowItWorks />
       <SafeBanner />
       <LungsHelp />
