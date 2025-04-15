@@ -9,12 +9,12 @@ import ResultsPage from "./results-page/ResultsPage";
 const ExtraPage = () => {
   return (
     <>
-      {/* <StartingPage /> */}
+      <StartingPage />
       {/* <Popup /> */}
       {/* <RecordingPage /> */}
       {/* <LoadingPage /> */}
       {/* <ResultsPage /> */}
-      <ErrorPage />
+      {/* <ErrorPage /> */}
     </>
   );
 };
