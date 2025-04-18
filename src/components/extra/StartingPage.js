@@ -19,12 +19,12 @@ const steps = [
 const StartingPage = () => {
   return (
     <>
-      <section className="minfullVh minfullSvh lg:pt-[14.1vh] sm:pt-52 pt-28 text-white relative flex">
-        <div className="atlwh_Full top-0 pointer-events-none">
+      <section className="minfullVh minfullSvh lg:pt-[14vh] sm:pt-52 pt-28 text-white relative flex">
+        <div className="atlwh_Full top-0 pointer-events-none overflow-hidden">
           <img
             src="/images/extra/abstract_bg.jpeg"
             alt="abstract_bg"
-            className="atlwh_Full object-cover"
+            className="w-full absolute top-0 left-0 object-cover"
           />
           <img
             src="/images/extra/mob_pattern.png"

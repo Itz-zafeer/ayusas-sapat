@@ -7,7 +7,7 @@ const Popup = () => {
         <img
           src="/images/extra/abstract_bg.jpeg"
           alt="abstract_bg"
-          className="atlwh_Full object-cover"
+          className="w-full absolute top-0 left-0 object-cover"
         />
       </div>
       <div className="relative z-[2] lg:w-[65.0694444444vw] w-[93.429%] lg:border-4 border border-white bg-[#FFFFFF1A] lg:rounded-[2.43055555556vw] rounded-[35px] lg:p-[3.33333333333vw] pt-8 pb-12 px-9">
