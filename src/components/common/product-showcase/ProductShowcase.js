@@ -6,7 +6,7 @@ import Card from "./Card";
 import useResponsivness from "@/hooks/useResponsivness";
 import SwiperButtons from "../SwiperButtons";
 
-const ProductShowcase = ({ data, heading }) => {
+const ProductShowcase = ({ data, heading, wrapperClasses }) => {
   const productShowcaseSwiper = useRef(null);
   const { isDesktop, isTablet } = useResponsivness();
   const [swiperGap, setSwiperGap] = useState(0);
@@ -17,8 +17,8 @@ const ProductShowcase = ({ data, heading }) => {
         window.innerWidth >= 1025
           ? (window.innerWidth / 100) * 2.25
           : window.innerWidth >= 641
-          ? 10
-          : 10
+            ? 10
+            : 10
       );
     }
     updateGap();
@@ -28,10 +28,13 @@ const ProductShowcase = ({ data, heading }) => {
 
   return (
     <section>
-      <div className="lg:py-[var(--vw114)] py-[81px] bg-f5eee1">
-        <h2 className="text60 text-darkblack capitalize text-center myContainer">
-          {heading}
-        </h2>
+      <div
+        className={`${wrapperClasses ? wrapperClasses : "bg-f5eee1 lg:py-[var(--vw114)] py-[81px]"}`}
+      >
+        <h2
+          dangerouslySetInnerHTML={{ __html: heading }}
+          className="text60 text-darkblack capitalize text-center myContainer"
+        ></h2>
         <div className="relative lg:mt-[var(--vw70)] mt-10">
           <Swiper
             grabCursor={isDesktop && data.length > 4}
