@@ -24,7 +24,7 @@ const StartingPage = () => {
           <img
             src="/images/extra/abstract_bg.jpeg"
             alt="abstract_bg"
-            className="w-full absolute top-0 left-0 object-cover"
+            className="atlwh_Full object-cover"
           />
           <img
             src="/images/extra/mob_pattern.png"

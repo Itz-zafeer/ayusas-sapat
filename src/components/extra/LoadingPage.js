@@ -7,7 +7,7 @@ const LoadingPage = () => {
         <img
           src="/images/extra/abstract_bg.jpeg"
           alt="abstract_bg"
-          className="w-full absolute top-0 left-0 object-cover"
+          className="atlwh_Full object-cover"
         />
       </div>
       <div className="relative z-[2] flex flex-col items-center text-center justify-center w-[90%] mx-auto">
