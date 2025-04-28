@@ -22,7 +22,7 @@ const Score = ({ score, desc }) => {
           </span>
         </div>
         <div className="lg:flex-1 w-full lg:w-auto order-2 lg:order-[unset] flex flex-col items-center text-center">
-          <h1 className="lg:text-[13.3333333333vh] lg:leading-[13.3333333333vh] text-[15.3846153846vw] leading-[15.3846153846vw] uppercase font-black">
+          <h1 className="lg:text-[13.3333333333vh] lg:leading-[13.3333333333vh] text-[12.8205128205vw] leading-[12.8205128205vw] mt-[2.5641025641vw] lg:mt-0 uppercase font-black">
             {score}
           </h1>
           <div

@@ -38,7 +38,7 @@ const ResultsPage = () => {
           <span className="bg-[#056D3699] atlwh_Full"></span>
         </div>
         {/* LOW  */}
-        <div className="relative z-[2] w-full">
+        {/* <div className="relative z-[2] w-full">
           <MarqueeSlider />
           <div className="lg:w-[87.7777777778vw] w-[86.668%] mx-auto">
             <Score
@@ -260,7 +260,7 @@ const ResultsPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* LOW  */}
         {/* MEDIUM */}
         {/* <div className="relative z-[2] w-full">
@@ -797,7 +797,7 @@ const ResultsPage = () => {
         </div> */}
         {/* HIGH  */}
         {/* EXCELLENT */}
-        {/* <div className="relative z-[2] w-full">
+        <div className="relative z-[2] w-full">
           <MarqueeSlider />
           <div className="lg:w-[87.7777777778vw] w-[86.668%] mx-auto">
             <Score
@@ -1008,7 +1008,7 @@ const ResultsPage = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
         {/* EXCELLENT */}
       </section>
     </>
